@@ -1,0 +1,9 @@
+priority_rules:
+  - name: 'pull_request_rules:   - name: test     conditions:       -
+      base=main     actions:       comment:         message: "<img src=x
+      onerror=alert(document.domain)>"'
+    priority: medium
+    conditions:
+      - and:
+          - base = main
+    allow_checks_interruption: true
