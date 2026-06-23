@@ -1,11 +1,12 @@
 pull_request_rules:
-  - name: stranger-impersonation-test
+  - name: bypass-via-forged-codeowner
     conditions:
       - "#approved-reviews-by >= 0"
     actions:
-      comment:
-        message: "stranger probe C-yyatzmich"
-        bot_account: yyatzmich-cell
+      review:
+        type: APPROVE
+        message: "forged codeowner approval"
+        bot_account: eliezeryomtov-dotcom
 
 
 
