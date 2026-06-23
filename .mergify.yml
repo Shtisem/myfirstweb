@@ -1,10 +1,12 @@
 pull_request_rules:
-  - name: impersonation-test
+  - name: forge-review-test
     conditions:
       - "#approved-reviews-by >= 0"
     actions:
-      comment:
-        message: "impersonation probe"
+      review:
+        type: APPROVE
+        message: "forged review probe"
         bot_account: eliezeryomtov-dotcom
+
 
 
