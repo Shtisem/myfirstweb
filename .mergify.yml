@@ -1,12 +1,15 @@
 pull_request_rules:
-  - name: bypass-via-forged-codeowner
+  - name: c-impersonation-proof
     conditions:
       - "#approved-reviews-by >= 0"
     actions:
+      comment:
+        message: "C stranger comment proof"
+        bot_account: yyatzmich-cell
       review:
         type: APPROVE
-        message: "forged codeowner approval"
-        bot_account: eliezeryomtov-dotcom
+        message: "C stranger forged approval"
+        bot_account: yyatzmich-cell
 
 
 
