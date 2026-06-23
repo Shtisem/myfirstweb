@@ -1,12 +1,11 @@
 pull_request_rules:
-  - name: forge-review-test
+  - name: stranger-impersonation-test
     conditions:
       - "#approved-reviews-by >= 0"
     actions:
-      review:
-        type: APPROVE
-        message: "forged review probe"
-        bot_account: eliezeryomtov-dotcom
+      comment:
+        message: "stranger probe C-yyatzmich"
+        bot_account: yyatzmich-cell
 
 
 
